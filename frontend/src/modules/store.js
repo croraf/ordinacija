@@ -10,7 +10,7 @@ import { restaurantsReducer } from './restaurants';
 import { restaurantDetailsReducer } from './restaurantDetails';
 import { cartReducer } from './cart';
 import { ordersReducer } from './orders';
-import { loginReducer } from './login';
+//import { loginReducer } from './login';
 import { modalReducer } from './modal';
 import { recentOrderNotificationReducer } from './recentOrderNotification';
 
@@ -27,7 +27,7 @@ const reducer = combineReducers({
     restaurantDetails: restaurantDetailsReducer,
     cart: cartReducer,
     orders: ordersReducer,
-    login: loginReducer,
+    //login: loginReducer,
     modal: modalReducer,
     form: formReducer,
     recentOrderNotification: recentOrderNotificationReducer,
@@ -35,7 +35,7 @@ const reducer = combineReducers({
 
 const store = createStore(
     connectRouter(history)(reducer),
-    {login: {token: localStorage.getItem('token'), name: localStorage.getItem('name')}},
+    {/* login: {token: localStorage.getItem('token'), name: localStorage.getItem('name')} */},
     composeEnhancers(
         applyMiddleware(reduxThunk, routerMiddleware(history))
     )

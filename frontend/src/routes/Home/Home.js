@@ -32,8 +32,8 @@ const containerStyleHd = Object.assign({}, containerStyleFullHd, containerStyleH
 
 class Home extends React.Component {
 
-    componentWillMount() {
-        this.props.checkAuthenticationAndLoadUserData();
+    componentDidMount () {
+        // this.props.checkAuthenticationAndLoadUserData();
     }
 
     render() {
@@ -45,14 +45,21 @@ class Home extends React.Component {
                 flexDirection: 'row',
                 justifyContent: 'center', */
                 //backgroundColor: 'whitesmoke'
+                display: 'flex',
+                alignItems: 'center',
+                width: '95%',
+                maxWidth: '1000px',
+                margin: 'auto',
+                marginTop: '1rem',
+                flexDirection: 'column',
             }}>
                 {/* <div style={{
                     minWidth: '200px'
                 }}><img src='https://picsum.photos/200/600' /></div> */}
 
-                <RecentOrderNotificationContainer />
+                {/* <RecentOrderNotificationContainer /> */}
 
-                <MediaQuery query='(max-device-width: 1700px)'>
+                {/* <MediaQuery query='(max-device-width: 1700px)'>
                     <div style={containerStyleHd}>
                         <TitleRowContainer />
                         <HomeRouter />
@@ -64,13 +71,16 @@ class Home extends React.Component {
                         <TitleRowContainer />
                         <HomeRouter />
                     </div>
-                </MediaQuery>
+                </MediaQuery> */}
                 
                 {/* <div style={{
                     minWidth: '200px'
                 }}><img src='https://picsum.photos/300/300' /></div> */}
 
-                <CartModalContainer />
+                <TitleRowContainer />
+                <HomeRouter />
+                <div style={{width: '100%', backgroundColor: 'black', color: 'white'}}>Footer</div>
+                {/* <CartModalContainer /> */}
             </div>
         );
     }

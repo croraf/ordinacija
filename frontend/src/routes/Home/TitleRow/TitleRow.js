@@ -2,7 +2,9 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import {MainMenuContainer} from './MainMenu/MainMenuContainer';
 import { CartButtonContainer } from './CartButton/CartButtonContainer';
+import Link from '@material-ui/core/Link';
 
+const dudUrl = 'javascript:;';
 class TitleRow extends React.Component {
     render() {
         const {loginStatus, loginButtonHandler, logoClickedHandler} = this.props;
@@ -10,31 +12,32 @@ class TitleRow extends React.Component {
         return (
             <div style={{
                 width: '100%',
-                margin: '15px 0px',
+                margin: '15px 0px 3rem 0px',
                 display: 'flex',
                 flexDirection: 'row',
-                justifyContent: 'space-between'
+                justifyContent: 'space-between',
             }}>
                 <div 
                     onClick={logoClickedHandler}
                     style={{
-                        fontSize: '3rem',
-                        width: '33%',
+                        fontSize: '2rem',
                         cursor: 'pointer',
                         fontWeight: 'bold'
                     }}
                 >
-                    order.me
+                    Ordinacija Zekić
                 </div>
 
                 
-                <div style={{width: '33%', display: 'flex', justifyContent: 'flex-end'}}>
-                    <CartButtonContainer />
+                <div style={{display: 'flex', justifyContent: 'flex-end', alignItems: 'center'}}>
+                    <Link href={'./'}style={{marginRight: '2rem'}}>Usluge</Link>
+                    <Link href={'./contact'}>Kontakt</Link>
+                    {/* <CartButtonContainer />
                     {
                         loginStatus ? 
                             <MainMenuContainer /> :
                             <Button style={{height: '75%', margin: 'auto 0px', width: '33%', padding: '0rem'}} variant='outlined' color='secondary' onClick={loginButtonHandler}>Log in</Button>
-                    }
+                    } */}
                 </div>
             </div>
         );

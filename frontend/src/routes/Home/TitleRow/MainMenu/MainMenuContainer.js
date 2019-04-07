@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import MainMenu from './MainMenu';
 import {push} from 'connected-react-router';
 
-import {logoutHandler} from 'Modules/login';
+//import {logoutHandler} from 'Modules/login';
 
 const mapStateToProps = (state) => ({
 });
