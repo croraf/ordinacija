@@ -5,6 +5,7 @@ import {push} from 'connected-react-router';
 
 const mapStateToProps = (state) => ({
     // loginStatus: state.login.token
+    currentRoute: state.router.location.pathname
 });
 
 const mapDispatchToProps = (dispatch) => ({

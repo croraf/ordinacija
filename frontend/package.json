@@ -8,7 +8,7 @@
     "dev": "webpack-dev-server --mode=development",
     "compile": "webpack --mode=production",
     "installAndCompile": "npm install && npm run compile",
-    "compileStatic": "webpack --mode=development"
+    "compileStatic": "webpack --mode=production"
   },
   "author": "",
   "license": "ISC",

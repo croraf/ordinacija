@@ -14,7 +14,7 @@ class Contact extends React.Component {
                 display: 'flex',
                 flexDirection: 'column',
             }}>
-                <div style={{fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 'bold'}}>Radno vrijeme</div>
+                <div style={{fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 'bold', marginTop: '2rem'}}>Radno vrijeme</div>
                 <div style={{
                     display: 'flex',
                     flexDirection: 'column',
