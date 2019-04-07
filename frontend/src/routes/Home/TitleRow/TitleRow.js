@@ -1,13 +1,12 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import {MainMenuContainer} from './MainMenu/MainMenuContainer';
-import { CartButtonContainer } from './CartButton/CartButtonContainer';
+//import Button from '@material-ui/core/Button';
+/* import {MainMenuContainer} from './MainMenu/MainMenuContainer';
+import { CartButtonContainer } from './CartButton/CartButtonContainer'; */
 import Link from '@material-ui/core/Link';
 
-const dudUrl = 'javascript:;';
 class TitleRow extends React.Component {
     render() {
-        const {loginStatus, loginButtonHandler, logoClickedHandler} = this.props;
+        const {servicesClickHadnler, contactClickHandler, logoClickedHandler} = this.props;
 
         return (
             <div style={{
@@ -18,10 +17,10 @@ class TitleRow extends React.Component {
                 justifyContent: 'space-between',
             }}>
                 <div 
-                    onClick={logoClickedHandler}
+                    /* onClick={logoClickedHandler} */
                     style={{
                         fontSize: '2rem',
-                        cursor: 'pointer',
+                        //cursor: 'pointer',
                         fontWeight: 'bold'
                     }}
                 >
@@ -30,8 +29,8 @@ class TitleRow extends React.Component {
 
                 
                 <div style={{display: 'flex', justifyContent: 'flex-end', alignItems: 'center'}}>
-                    <Link href={'./'}style={{marginRight: '2rem'}}>Usluge</Link>
-                    <Link href={'./contact'}>Kontakt</Link>
+                    <Link onClick={servicesClickHadnler} style={{marginRight: '2rem', cursor: 'pointer'}}>Usluge</Link>
+                    <Link onClick={contactClickHandler} style={{cursor: 'pointer'}}>Kontakt</Link>
                     {/* <CartButtonContainer />
                     {
                         loginStatus ? 

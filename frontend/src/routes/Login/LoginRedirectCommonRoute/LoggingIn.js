@@ -1,7 +1,7 @@
 import React from 'react';
 import config from 'Config';
 
-import CustomSpinner from 'Components/CustomSpinner/CustomSpinner';
+// import CustomSpinner from 'Components/CustomSpinner/CustomSpinner';
 
 const fetchJwtContactParentAndClose = async (code, provider) => {
     console.log('fetching auth token for received authentication code from provider:', provider);
@@ -61,7 +61,7 @@ class LoggingIn extends React.Component {
                 flexDirection: 'row',
                 marginTop: '150px'
             }}>
-                <CustomSpinner color='darkblue' />
+                {/* <CustomSpinner color='darkblue' /> */}
             </div>
         );
     }

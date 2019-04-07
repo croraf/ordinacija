@@ -10,10 +10,16 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
     /* loginButtonHandler: () => {
         dispatch(loginButtonHandler());
-    },
+    }, */
     logoClickedHandler: () => {
         dispatch(push('/'));
-    } */
+    },
+    servicesClickHadnler: () => {
+        dispatch(push('/'));
+    },
+    contactClickHandler: () => {
+        dispatch(push('/contact'));
+    },
 });
 
 

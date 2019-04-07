@@ -3,7 +3,7 @@ import MediaQuery from 'react-responsive';
 
 import { TitleRowContainer } from './TitleRow/TitleRowContainer';
 import { HomeRouter } from './HomeRouter';
-import { CartModalContainer } from './CartModal/CartModalContainer';
+//import { CartModalContainer } from './CartModal/CartModalContainer';
 import { RecentOrderNotificationContainer } from './RecentOrderNotification/RecentOrderNotificationContainer';
 
 const containerWidth = 950;
