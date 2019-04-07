@@ -35,7 +35,7 @@ class TitleRow extends React.Component {
                     style={{display: 'flex', justifyContent: 'flex-end', alignItems: 'center', marginBottom: '1rem'}}
                 >
                     <Grid container>
-                        <Grid item xs={0} md={3} style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
+                        <Grid item xs={false} md={3} style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
                            
                         </Grid>
                         <Grid item xs={4} md={3} style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
