@@ -1,11 +1,12 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
+/* import MediaQuery from 'react-responsive'; */
 
 import { TitleRowContainer } from './TitleRow/TitleRowContainer';
 import { HomeRouter } from './HomeRouter';
 //import { CartModalContainer } from './CartModal/CartModalContainer';
-import { RecentOrderNotificationContainer } from './RecentOrderNotification/RecentOrderNotificationContainer';
+/* import { RecentOrderNotificationContainer } from './RecentOrderNotification/RecentOrderNotificationContainer'; */
 
+/* 
 const containerWidth = 950;
 
 const containerStyleFullHd = {
@@ -28,7 +29,7 @@ const containerStyleHdOverrides = {
 };
 
 const containerStyleHd = Object.assign({}, containerStyleFullHd, containerStyleHdOverrides);
-
+ */
 
 class Home extends React.Component {
 

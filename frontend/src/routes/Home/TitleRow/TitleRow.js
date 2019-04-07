@@ -3,55 +3,75 @@ import React from 'react';
 /* import {MainMenuContainer} from './MainMenu/MainMenuContainer';
 import { CartButtonContainer } from './CartButton/CartButtonContainer'; */
 import Link from '@material-ui/core/Link';
+import Grid from '@material-ui/core/Grid';
 
 class TitleRow extends React.Component {
     render() {
         const {servicesClickHadnler, contactClickHandler, logoClickedHandler, currentRoute} = this.props;
 
         return (
-            <div style={{
+            <Grid container style={{
                 width: '100%',
-                margin: '15px 0px 4rem 0px',
+                margin: '15px 0px 1rem 0px',
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'space-between',
             }}>
-                <div 
+                <Grid item xs={12} md={6}
                     /* onClick={logoClickedHandler} */
                     style={{
                         fontSize: '2.3rem',
                         //cursor: 'pointer',
                         fontWeight: 'bold',
-                        color: 'black'
+                        color: 'black',
+                        marginBottom: '1rem'
                     }}
                 >
                     Ordinacija Zekić
-                </div>
+                </Grid>
 
                 
-                <div style={{display: 'flex', justifyContent: 'flex-end', alignItems: 'center',}}>
-                    <Link 
-                        onClick={servicesClickHadnler}
-                        style={{fontSize: '1.2rem', cursor: currentRoute === '/' ? 'default' : 'pointer', color: 'black', fontWeight: currentRoute === '/' && 'bold', marginRight: '2rem', }}
-                        underline='none'
-                    >
-                        Usluge
-                    </Link>
-                    <Link 
-                        onClick={contactClickHandler}
-                        style={{fontSize: '1.2rem', cursor: currentRoute === '/contact' ? 'default' : 'pointer', color: 'black', fontWeight: currentRoute === '/contact' && 'bold'}}
-                        underline='none'
-                    >
-                        Kontakt
-                    </Link>
-                    {/* <CartButtonContainer />
-                    {
-                        loginStatus ? 
-                            <MainMenuContainer /> :
-                            <Button style={{height: '75%', margin: 'auto 0px', width: '33%', padding: '0rem'}} variant='outlined' color='secondary' onClick={loginButtonHandler}>Log in</Button>
-                    } */}
-                </div>
-            </div>
+                <Grid item xs={12} md={6}
+                    style={{display: 'flex', justifyContent: 'flex-end', alignItems: 'center', marginBottom: '1rem'}}
+                >
+                    <Grid container>
+                        <Grid item xs={0} md={3} style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
+                           
+                        </Grid>
+                        <Grid item xs={4} md={3} style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
+                            <Link 
+                                onClick={servicesClickHadnler}
+                                style={{fontSize: '1.2rem', cursor: currentRoute === '/' ? 'default' : 'pointer', color: 'black', fontWeight: currentRoute === '/' && 'bold',}}
+                                underline='none'
+                            >
+                                O nama
+                            </Link>
+                        </Grid>
+                        <Grid item xs={4} md={3} style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
+                            <Link 
+                                onClick={servicesClickHadnler}
+                                style={{fontSize: '1.2rem', cursor: currentRoute === '/' ? 'default' : 'pointer', color: 'black', fontWeight: currentRoute === '/' && 'bold',}}
+                                underline='none'
+                            >
+                                Usluge
+                            </Link>
+                        </Grid>
+                        <Grid item xs={4} md={3} style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
+                            <Link 
+                                onClick={contactClickHandler}
+                                style={{fontSize: '1.2rem', cursor: currentRoute === '/contact' ? 'default' : 'pointer', color: 'black', fontWeight: currentRoute === '/contact' && 'bold',}}
+                                underline='none'
+                            >
+                                Kontakt
+                            </Link>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                {/*THIS IS A HACK TO ADD EXTRA SPACE BELOW TITLE WHEN SIZE IS LARGER THAN md*/}
+                <Grid item xs={6} md={12} style={{height: '1rem'}} />
+                <Grid item xs={6} md={12} style={{height: '1rem'}} />
+            </Grid>
         );
     }
 }
