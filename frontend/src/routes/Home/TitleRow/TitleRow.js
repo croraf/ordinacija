@@ -16,15 +16,19 @@ class TitleRow extends React.Component {
                 <Grid container style={{
                     position: 'fixed',
                     top: '0rem',
-                    backgroundColor: 'whitesmoke',
+                    backgroundColor: '#a48500',
+                    /* backgroundColor: 'rgba(0, 117, 189, 0.9)', */
                     width: '100%',
                     margin: 'auto',
                     padding: '1.5rem 1.5rem 0rem 1.5rem',
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'space-between',
-                    borderBottom: '1px solid black',
-                    /* opacity: '0.7' */
+                    /* borderBottom: '1px solid black', */
+
+                    color: 'black',
+                    opacity: '0.95',
+                    height: '6rem',
                 }}>
                     <Grid item xs={12} md={6}
                         /* onClick={logoClickedHandler} */
@@ -32,7 +36,6 @@ class TitleRow extends React.Component {
                             fontSize: '2.3rem',
                             //cursor: 'pointer',
                             fontWeight: 'bold',
-                            color: 'black',
                             marginBottom: '1rem'
                         }}
                     >
@@ -81,7 +84,8 @@ class TitleRow extends React.Component {
                     <Grid item xs={6} md={12} style={{height: '0.5rem'}} />
                     <Grid item xs={6} md={12} style={{height: '0.5rem'}} />
                 </Grid>
-                <div style={{width: '100%', height: '700px', overflow: 'hidden', textAlign: 'center', marginTop: '6rem'}}>
+                <div style={{width: '100%', height: '6rem', backgroundColor: '#a48500'}} />
+                <div style={{width: '100%', height: '700px', overflow: 'hidden', textAlign: 'center', /* marginTop: '6rem',  */marginBottom: '2rem'}}>
                     <img src={woman} style={{width: '100%'}}/> 
                 </div>
             </>

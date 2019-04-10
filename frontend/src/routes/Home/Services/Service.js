@@ -9,7 +9,7 @@ class Service extends React.Component {
     render() {
         return (
             <div style={{
-                marginTop: '2rem',
+                marginTop: '3rem',
                 marginBottom: '2.5rem',
                 width: '100%'
             }}>

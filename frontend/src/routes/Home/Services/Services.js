@@ -19,6 +19,7 @@ class Services extends React.Component {
                 flexDirection: 'column',
                 alignItems: 'center',
                 marginBottom: '1rem',
+                marginTop: '0rem',
             }}>
                 <Service />
 
