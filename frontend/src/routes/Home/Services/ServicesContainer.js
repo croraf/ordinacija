@@ -7,15 +7,15 @@ import {Services} from './Services';
 const mapStateToProps = (state) => {
 
     return ({
-        listOfRestaurants: state.restaurants,
+        /* listOfRestaurants: state.restaurants,
         openOnly: state.filters.openOnly,
-        area: state.filters.area
+        area: state.filters.area */
     });
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    onRestaurantClickHandler: (restaurantName) => {dispatch(push('/restaurants/' + restaurantName));},
-    loadRouteData: () => {dispatch(loadRouteData());}
+    /* onRestaurantClickHandler: (restaurantName) => {dispatch(push('/restaurants/' + restaurantName));},
+    loadRouteData: () => {dispatch(loadRouteData());} */
 });
 
 

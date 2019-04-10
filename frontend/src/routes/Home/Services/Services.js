@@ -10,7 +10,7 @@ class Services extends React.Component {
 
     render() {
 
-        const {listOfRestaurants, openOnly, area, onRestaurantClickHandler} = this.props;
+        const {/* listOfRestaurants, openOnly, area, onRestaurantClickHandler */} = this.props;
 
         return (
             <div style={{
