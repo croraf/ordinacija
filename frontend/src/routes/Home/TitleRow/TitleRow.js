@@ -59,12 +59,12 @@ class TitleRow extends React.Component {
             <>
                 <div style={{
                     position: 'fixed',
-                    top: '1.5rem',
+                    top: '0rem',
                     backgroundColor: '#a48500',
                     /* backgroundColor: 'rgba(0, 117, 189, 0.9)', */
                     width: '100%',
                     /* margin: 'auto', */
-                    padding: '1.5rem 1.5rem 1.5rem 1.5rem',
+                    padding: '0rem 1.5rem 0rem 1.5rem',
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'space-between',
@@ -72,7 +72,7 @@ class TitleRow extends React.Component {
                     /* borderBottom: '1px solid black', */
                     color: 'white',
                     opacity: '0.95',
-                    height: '3rem',
+                    height: '6rem',
                     boxSizing: 'border-box'
                 }}>
                     <div
