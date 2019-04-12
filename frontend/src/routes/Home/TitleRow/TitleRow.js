@@ -18,7 +18,7 @@ const styles = {
         overflow: 'hidden',
         textAlign: 'center',
         /* marginTop: '6rem',*/
-        marginBottom: '-2rem',
+        marginBottom: '-1rem',
     },
     mdMenu: {
         display: 'none',
