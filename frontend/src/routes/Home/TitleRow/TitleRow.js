@@ -9,6 +9,7 @@ import { withStyles } from '@material-ui/styles';
 import woman from './BeautifulWoman.jpg';
 
 import Menu from './Menu';
+import { SidebarMenu } from './SidebarMenu';
 
 const styles = {
     image: {
@@ -19,47 +20,62 @@ const styles = {
         /* marginTop: '6rem',*/
         marginBottom: '-2rem',
     },
-    menuItemsWrapper: {
+    mdMenu: {
         display: 'none',
+    },
+    xsMenu: {
+
     },
     '@media (min-width: 960px)': {
         image: {
             marginBottom: '2rem',
         },
-        menuItemsWrapper: {
+        mdMenu: {
             display: 'flex',
-            justifyContent: 'flex-end',
-            alignItems: 'center',
-            marginBottom: '1rem',
+            flexDirection: 'row',
+            justifyContent: 'right',
+            alignItems: 'center'
+        },
+        xsMenu: {
+            display: 'none',
         },
     },
 };
 
 
 class TitleRow extends React.Component {
+
+    state = {
+        sidebarOpen: false
+    };
+    onSetSidebarOpen = (open) => {
+        this.setState({ sidebarOpen: open });
+    }
+
     render() {
         const {servicesClickHadnler, contactClickHandler, logoClickedHandler, classes, currentRoute} = this.props;
 
         return (
             <>
-                <Grid container style={{
+                <div style={{
                     position: 'fixed',
-                    top: '0rem',
+                    top: '1.5rem',
                     backgroundColor: '#a48500',
                     /* backgroundColor: 'rgba(0, 117, 189, 0.9)', */
                     width: '100%',
-                    margin: 'auto',
+                    /* margin: 'auto', */
                     padding: '1.5rem 1.5rem 1.5rem 1.5rem',
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'space-between',
+                    alignItems: 'center',
                     /* borderBottom: '1px solid black', */
-
                     color: 'white',
                     opacity: '0.95',
-                    height: '4.5rem',
+                    height: '3rem',
+                    boxSizing: 'border-box'
                 }}>
-                    <Grid item xs={12} md={6}
+                    <div
                         /* onClick={logoClickedHandler} */
                         style={{
                             fontSize: '2.3rem',
@@ -68,12 +84,25 @@ class TitleRow extends React.Component {
                         }}
                     >
                         Ordinacija Zekić
-                    </Grid>
+                    </div>
 
-                    <Grid item xs={12} md={6} className={classes.menuItemsWrapper}>
+                    <div className={classes.mdMenu}>
                         <Menu servicesClickHadnler={servicesClickHadnler} contactClickHandler={contactClickHandler} currentRoute={currentRoute} />
-                    </Grid>
-                </Grid>
+                    </div>
+
+                    <div className={classes.xsMenu}>
+                        <button onClick={() => this.onSetSidebarOpen(true)}>
+                            Open sidebar
+                        </button>
+                        <SidebarMenu 
+                            servicesClickHadnler={servicesClickHadnler}
+                            contactClickHandler={contactClickHandler}
+                            currentRoute={currentRoute} 
+                            open={this.state.sidebarOpen}
+                            onSetSidebarOpen={this.onSetSidebarOpen}
+                        />
+                    </div>
+                </div>
 
                 <div style={{width: '100%', height: '6rem', backgroundColor: '#a48500'}} />
                 <div className={classes.image}>
