@@ -2,12 +2,13 @@ import React from 'react';
 //import Button from '@material-ui/core/Button';
 /* import {MainMenuContainer} from './MainMenu/MainMenuContainer';
 import { CartButtonContainer } from './CartButton/CartButtonContainer'; */
-import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 
 import { withStyles } from '@material-ui/styles';
 
 import woman from './BeautifulWoman.jpg';
+
+import Menu from './Menu';
 
 const styles = {
     image: {
@@ -30,7 +31,7 @@ const styles = {
             justifyContent: 'flex-end',
             alignItems: 'center',
             marginBottom: '1rem',
-        }
+        },
     },
 };
 
@@ -48,7 +49,7 @@ class TitleRow extends React.Component {
                     /* backgroundColor: 'rgba(0, 117, 189, 0.9)', */
                     width: '100%',
                     margin: 'auto',
-                    padding: '1.5rem 1.5rem 0rem 1.5rem',
+                    padding: '1.5rem 1.5rem 1.5rem 1.5rem',
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'space-between',
@@ -56,7 +57,7 @@ class TitleRow extends React.Component {
 
                     color: 'white',
                     opacity: '0.95',
-                    height: '6rem',
+                    height: '4.5rem',
                 }}>
                     <Grid item xs={12} md={6}
                         /* onClick={logoClickedHandler} */
@@ -69,45 +70,9 @@ class TitleRow extends React.Component {
                         Ordinacija Zekić
                     </Grid>
 
-                    
                     <Grid item xs={12} md={6} className={classes.menuItemsWrapper}>
-                        <Grid container>
-                            <Grid item xs={false} md={3} style={{display: 'flex', flexDirection: 'row', justifyContent: 'right'}}>
-                            
-                            </Grid>
-                            <Grid item xs={4} md={3} style={{display: 'flex', flexDirection: 'row', justifyContent: 'right'}}>
-                                <Link 
-                                    onClick={servicesClickHadnler}
-                                    style={{fontSize: '1.2rem', cursor: currentRoute === '/' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/' && 'bold',}}
-                                    underline='none'
-                                >
-                                    O nama
-                                </Link>
-                            </Grid>
-                            <Grid item xs={4} md={3} style={{display: 'flex', flexDirection: 'row', justifyContent: 'right'}}>
-                                <Link 
-                                    onClick={servicesClickHadnler}
-                                    style={{fontSize: '1.2rem', cursor: currentRoute === '/' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/' && 'bold',}}
-                                    underline='none'
-                                >
-                                    Usluge
-                                </Link>
-                            </Grid>
-                            <Grid item xs={4} md={3} style={{display: 'flex', flexDirection: 'row', justifyContent: 'right'}}>
-                                <Link 
-                                    onClick={contactClickHandler}
-                                    style={{fontSize: '1.2rem', cursor: currentRoute === '/contact' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/contact' && 'bold',}}
-                                    underline='none'
-                                >
-                                    Kontakt
-                                </Link>
-                            </Grid>
-                        </Grid>
+                        <Menu servicesClickHadnler={servicesClickHadnler} contactClickHandler={contactClickHandler} currentRoute={currentRoute} />
                     </Grid>
-
-                    {/*THIS IS A HACK TO ADD EXTRA SPACE BELOW TITLE WHEN SIZE IS LARGER THAN md*/}
-                    <Grid item xs={6} md={12} style={{height: '0.5rem'}} />
-                    <Grid item xs={6} md={12} style={{height: '0.5rem'}} />
                 </Grid>
 
                 <div style={{width: '100%', height: '6rem', backgroundColor: '#a48500'}} />
@@ -120,3 +85,4 @@ class TitleRow extends React.Component {
 }
 
 export default withStyles(styles)(TitleRow);
+
