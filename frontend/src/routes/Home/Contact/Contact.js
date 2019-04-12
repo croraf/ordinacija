@@ -7,7 +7,7 @@ import { MapContainer } from './MapContainer';
 class Contact extends React.Component {
 
     render() {
-        const {onReturnToListOfRestaurantsHandler} = this.props;
+        //const {} = this.props;
 
         return (
             <Grid container>
