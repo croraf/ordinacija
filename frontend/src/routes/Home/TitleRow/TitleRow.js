@@ -16,15 +16,24 @@ const styles = {
         overflow: 'hidden',
         textAlign: 'center',
         /* marginTop: '6rem',*/
-        marginBottom: '2rem',
+        marginBottom: '-2rem',
     },
-    '@media (max-width: 960px)': {
+    menuItemsWrapper: {
+        display: 'none',
+    },
+    '@media (min-width: 960px)': {
         image: {
-            marginBottom: '-2rem',
+            marginBottom: '2rem',
+        },
+        menuItemsWrapper: {
+            display: 'flex',
+            justifyContent: 'flex-end',
+            alignItems: 'center',
+            marginBottom: '1rem',
         }
-    }
-    
+    },
 };
+
 
 class TitleRow extends React.Component {
     render() {
@@ -55,16 +64,13 @@ class TitleRow extends React.Component {
                             fontSize: '2.3rem',
                             //cursor: 'pointer',
                             fontWeight: 'bold',
-                            marginBottom: '1rem'
                         }}
                     >
                         Ordinacija Zekić
                     </Grid>
 
                     
-                    <Grid item xs={12} md={6}
-                        style={{display: 'flex', justifyContent: 'flex-end', alignItems: 'center', marginBottom: '1rem'}}
-                    >
+                    <Grid item xs={12} md={6} className={classes.menuItemsWrapper}>
                         <Grid container>
                             <Grid item xs={false} md={3} style={{display: 'flex', flexDirection: 'row', justifyContent: 'right'}}>
                             
