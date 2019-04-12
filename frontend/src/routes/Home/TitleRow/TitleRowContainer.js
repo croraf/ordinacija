@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 //import {loginButtonHandler} from 'Modules/login';
-import {TitleRow} from './TitleRow';
+import TitleRow from './TitleRow';
 import {push} from 'connected-react-router';
 
 const mapStateToProps = (state) => ({

@@ -5,11 +5,30 @@ import { CartButtonContainer } from './CartButton/CartButtonContainer'; */
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 
+import { withStyles } from '@material-ui/styles';
+
 import woman from './BeautifulWoman.jpg';
+
+const styles = {
+    image: {
+        width: '100%',
+        maxHeight: '700px',
+        overflow: 'hidden',
+        textAlign: 'center',
+        /* marginTop: '6rem',*/
+        marginBottom: '2rem',
+    },
+    '@media (max-width: 960px)': {
+        image: {
+            marginBottom: '-2rem',
+        }
+    }
+    
+};
 
 class TitleRow extends React.Component {
     render() {
-        const {servicesClickHadnler, contactClickHandler, logoClickedHandler, currentRoute} = this.props;
+        const {servicesClickHadnler, contactClickHandler, logoClickedHandler, classes, currentRoute} = this.props;
 
         return (
             <>
@@ -84,8 +103,9 @@ class TitleRow extends React.Component {
                     <Grid item xs={6} md={12} style={{height: '0.5rem'}} />
                     <Grid item xs={6} md={12} style={{height: '0.5rem'}} />
                 </Grid>
+
                 <div style={{width: '100%', height: '6rem', backgroundColor: '#a48500'}} />
-                <div style={{width: '100%', maxHeight: '600px', overflow: 'hidden', textAlign: 'center', /* marginTop: '6rem',  */marginBottom: '2rem'}}>
+                <div className={classes.image}>
                     <img src={woman} style={{width: '100%'}}/> 
                 </div>
             </>
@@ -93,4 +113,4 @@ class TitleRow extends React.Component {
     }
 }
 
-export {TitleRow};
+export default withStyles(styles)(TitleRow);
