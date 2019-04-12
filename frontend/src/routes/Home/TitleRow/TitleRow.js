@@ -26,7 +26,7 @@ class TitleRow extends React.Component {
                     justifyContent: 'space-between',
                     /* borderBottom: '1px solid black', */
 
-                    color: 'black',
+                    color: 'white',
                     opacity: '0.95',
                     height: '6rem',
                 }}>
@@ -53,7 +53,7 @@ class TitleRow extends React.Component {
                             <Grid item xs={4} md={3} style={{display: 'flex', flexDirection: 'row', justifyContent: 'right'}}>
                                 <Link 
                                     onClick={servicesClickHadnler}
-                                    style={{fontSize: '1.2rem', cursor: currentRoute === '/' ? 'default' : 'pointer', color: 'black', fontWeight: currentRoute === '/' && 'bold',}}
+                                    style={{fontSize: '1.2rem', cursor: currentRoute === '/' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/' && 'bold',}}
                                     underline='none'
                                 >
                                     O nama
@@ -62,7 +62,7 @@ class TitleRow extends React.Component {
                             <Grid item xs={4} md={3} style={{display: 'flex', flexDirection: 'row', justifyContent: 'right'}}>
                                 <Link 
                                     onClick={servicesClickHadnler}
-                                    style={{fontSize: '1.2rem', cursor: currentRoute === '/' ? 'default' : 'pointer', color: 'black', fontWeight: currentRoute === '/' && 'bold',}}
+                                    style={{fontSize: '1.2rem', cursor: currentRoute === '/' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/' && 'bold',}}
                                     underline='none'
                                 >
                                     Usluge
@@ -71,7 +71,7 @@ class TitleRow extends React.Component {
                             <Grid item xs={4} md={3} style={{display: 'flex', flexDirection: 'row', justifyContent: 'right'}}>
                                 <Link 
                                     onClick={contactClickHandler}
-                                    style={{fontSize: '1.2rem', cursor: currentRoute === '/contact' ? 'default' : 'pointer', color: 'black', fontWeight: currentRoute === '/contact' && 'bold',}}
+                                    style={{fontSize: '1.2rem', cursor: currentRoute === '/contact' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/contact' && 'bold',}}
                                     underline='none'
                                 >
                                     Kontakt
@@ -85,7 +85,7 @@ class TitleRow extends React.Component {
                     <Grid item xs={6} md={12} style={{height: '0.5rem'}} />
                 </Grid>
                 <div style={{width: '100%', height: '6rem', backgroundColor: '#a48500'}} />
-                <div style={{width: '100%', height: '700px', overflow: 'hidden', textAlign: 'center', /* marginTop: '6rem',  */marginBottom: '2rem'}}>
+                <div style={{width: '100%', maxHeight: '600px', overflow: 'hidden', textAlign: 'center', /* marginTop: '6rem',  */marginBottom: '2rem'}}>
                     <img src={woman} style={{width: '100%'}}/> 
                 </div>
             </>
