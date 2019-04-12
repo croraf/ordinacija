@@ -6,24 +6,24 @@ import Link from '@material-ui/core/Link';
 class Menu extends React.Component {
 
     render() {
-        const {servicesClickHadnler, contactClickHandler, currentRoute} = this.props;
+        const {servicesClickHandler, contactClickHandler, currentRoute} = this.props;
 
         return (
             <>  
                 <Link 
-                    onClick={servicesClickHadnler}
+                    onClick={servicesClickHandler}
                     style={{marginLeft: '2rem', fontSize: '1.2rem', cursor: currentRoute === '/' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/' && 'bold',}}
                     underline='none'
                 >
-                            O nama
+                    O nama
                 </Link>
             
                 <Link 
-                    onClick={servicesClickHadnler}
+                    onClick={servicesClickHandler}
                     style={{marginLeft: '2rem', fontSize: '1.2rem', cursor: currentRoute === '/' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/' && 'bold',}}
                     underline='none'
                 >
-                            Usluge
+                    Usluge
                 </Link>
             
                 <Link 
@@ -31,7 +31,7 @@ class Menu extends React.Component {
                     style={{marginLeft: '2rem', fontSize: '1.2rem', cursor: currentRoute === '/contact' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/contact' && 'bold',}}
                     underline='none'
                 >
-                            Kontakt
+                    Kontakt
                 </Link>
             </>
         );

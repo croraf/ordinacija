@@ -15,7 +15,7 @@ const mapDispatchToProps = (dispatch) => ({
     logoClickedHandler: () => {
         dispatch(push('/'));
     },
-    servicesClickHadnler: () => {
+    servicesClickHandler: () => {
         dispatch(push('/'));
     },
     contactClickHandler: () => {

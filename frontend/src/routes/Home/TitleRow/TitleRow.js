@@ -2,11 +2,11 @@ import React from 'react';
 //import Button from '@material-ui/core/Button';
 /* import {MainMenuContainer} from './MainMenu/MainMenuContainer';
 import { CartButtonContainer } from './CartButton/CartButtonContainer'; */
-import Grid from '@material-ui/core/Grid';
 
 import { withStyles } from '@material-ui/styles';
 
 import woman from './BeautifulWoman.jpg';
+import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
 
 import Menu from './Menu';
 import { SidebarMenu } from './SidebarMenu';
@@ -53,7 +53,7 @@ class TitleRow extends React.Component {
     }
 
     render() {
-        const {servicesClickHadnler, contactClickHandler, logoClickedHandler, classes, currentRoute} = this.props;
+        const {servicesClickHandler, contactClickHandler, logoClickedHandler, classes, currentRoute} = this.props;
 
         return (
             <>
@@ -87,15 +87,18 @@ class TitleRow extends React.Component {
                     </div>
 
                     <div className={classes.mdMenu}>
-                        <Menu servicesClickHadnler={servicesClickHadnler} contactClickHandler={contactClickHandler} currentRoute={currentRoute} />
+                        <Menu servicesClickHandler={servicesClickHandler} contactClickHandler={contactClickHandler} currentRoute={currentRoute} />
                     </div>
 
                     <div className={classes.xsMenu}>
-                        <button onClick={() => this.onSetSidebarOpen(true)}>
-                            Open sidebar
-                        </button>
+                        <div 
+                            onClick={() => this.onSetSidebarOpen(true)}
+                            style={{cursor: 'pointer', display: this.state.sidebarOpen && 'none'}}
+                        >
+                            <AccessAlarmIcon />
+                        </div>
                         <SidebarMenu 
-                            servicesClickHadnler={servicesClickHadnler}
+                            servicesClickHandler={servicesClickHandler}
                             contactClickHandler={contactClickHandler}
                             currentRoute={currentRoute} 
                             open={this.state.sidebarOpen}
