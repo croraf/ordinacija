@@ -9,8 +9,8 @@ class Service extends React.Component {
     render() {
         return (
             <div style={{
-                marginTop: '3rem',
-                marginBottom: '2.5rem',
+                marginTop: '2.5rem',
+                marginBottom: '3rem',
                 width: '100%'
             }}>
                 <Grid container spacing={32} style={{alignContent: 'space-around'}}>

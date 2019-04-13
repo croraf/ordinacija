@@ -17,14 +17,14 @@ class MapContainer extends React.Component {
         const { center, zoom, minZoom, maxZoom } = this.state;
 
         return (
-            <div style={{width: '800px', maxWidth: '100%', border: '1px solid black'}}>
+            <div style={{width: '500px', maxWidth: '100%', border: '1px solid black'}}>
                 <Map 
                     center={center}
                     zoom={zoom}
                     minZoom={minZoom}
                     maxZoom={maxZoom}
                     defaultWidth={500}
-                    height={500}
+                    height={400}
                 >
                     <Marker anchor={[45.815, 15.9819]} payload={1} onClick={({ event, anchor, payload }) => {}} />
                 </Map>
