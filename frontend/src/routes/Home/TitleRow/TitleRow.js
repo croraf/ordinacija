@@ -1,14 +1,8 @@
 import React from 'react';
-//import Button from '@material-ui/core/Button';
-/* import {MainMenuContainer} from './MainMenu/MainMenuContainer';
-import { CartButtonContainer } from './CartButton/CartButtonContainer'; */
-
 import { withStyles } from '@material-ui/styles';
 
 import woman from './BeautifulWoman.jpg';
-import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
-
-import Menu from './Menu';
+import SpreadMenu from './SpreadMenu';
 import { SidebarMenu } from './SidebarMenu';
 
 const styles = {
@@ -45,13 +39,6 @@ const styles = {
 
 class TitleRow extends React.Component {
 
-    state = {
-        sidebarOpen: false
-    };
-    onSetSidebarOpen = (open) => {
-        this.setState({ sidebarOpen: open });
-    }
-
     render() {
         const {servicesClickHandler, contactClickHandler, logoClickedHandler, classes, currentRoute} = this.props;
 
@@ -61,9 +48,7 @@ class TitleRow extends React.Component {
                     position: 'fixed',
                     top: '0rem',
                     backgroundColor: '#a48500',
-                    /* backgroundColor: 'rgba(0, 117, 189, 0.9)', */
                     width: '100%',
-                    /* margin: 'auto', */
                     padding: '0rem 1.5rem 0rem 1.5rem',
                     display: 'flex',
                     flexDirection: 'row',
@@ -87,22 +72,18 @@ class TitleRow extends React.Component {
                     </div>
 
                     <div className={classes.mdMenu}>
-                        <Menu servicesClickHandler={servicesClickHandler} contactClickHandler={contactClickHandler} currentRoute={currentRoute} />
+                        <SpreadMenu
+                            servicesClickHandler={servicesClickHandler}
+                            contactClickHandler={contactClickHandler}
+                            currentRoute={currentRoute}
+                        />
                     </div>
 
                     <div className={classes.xsMenu}>
-                        <div 
-                            onClick={() => this.onSetSidebarOpen(true)}
-                            style={{cursor: 'pointer', display: this.state.sidebarOpen && 'none'}}
-                        >
-                            <AccessAlarmIcon />
-                        </div>
                         <SidebarMenu 
                             servicesClickHandler={servicesClickHandler}
                             contactClickHandler={contactClickHandler}
-                            currentRoute={currentRoute} 
-                            open={this.state.sidebarOpen}
-                            onSetSidebarOpen={this.onSetSidebarOpen}
+                            currentRoute={currentRoute}
                         />
                     </div>
                 </div>

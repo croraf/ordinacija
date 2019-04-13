@@ -3,7 +3,7 @@ import React from 'react';
 import Link from '@material-ui/core/Link';
 
 
-class Menu extends React.Component {
+class SpreadMenu extends React.Component {
 
     render() {
         const {servicesClickHandler, contactClickHandler, currentRoute} = this.props;
@@ -38,5 +38,5 @@ class Menu extends React.Component {
     }
 }
 
-export default (Menu);
+export default (SpreadMenu);
 
