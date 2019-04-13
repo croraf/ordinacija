@@ -17,7 +17,7 @@ class MapContainer extends React.Component {
         const { center, zoom, minZoom, maxZoom } = this.state;
 
         return (
-            <div style={{width: '800px', maxWidth: '100%', border: '1px solid black', zIndex: -1}}>
+            <div style={{width: '800px', maxWidth: '100%', border: '1px solid black'}}>
                 <Map 
                     center={center}
                     zoom={zoom}

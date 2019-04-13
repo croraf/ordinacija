@@ -58,7 +58,8 @@ class TitleRow extends React.Component {
                     color: 'white',
                     opacity: '0.95',
                     height: '6rem',
-                    boxSizing: 'border-box'
+                    boxSizing: 'border-box',
+                    zIndex: 100,
                 }}>
                     <div
                         /* onClick={logoClickedHandler} */
