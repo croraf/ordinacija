@@ -1,8 +1,17 @@
 
+HOW TO START:
+
+1. "cd frontend"
+2. "npm run dev"
+3. open page on "localhost:9002" 
+
+HOW TO COMPILE FOR BUILD:
+1. "cd frontend"
+2. "npm run compileStatic"
+3. your compiled files ready to deploy will be in "/frontend/dist"
+
 TODO: 
 
--change menu icon from clock
 -scroll to top when route change
 -make hash router to avoid backend
--bold selected rute on sidebar
 
