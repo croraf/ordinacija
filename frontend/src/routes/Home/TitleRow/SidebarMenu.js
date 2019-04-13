@@ -47,7 +47,7 @@ class SidebarMenu extends React.Component {
             <>
                 <div 
                     onClick={() => this.onSetSidebarOpen(true)}
-                    style={{cursor: 'pointer', display: this.state.sidebarOpen && 'none'}}
+                    style={{cursor: 'pointer', display: 'flex', marginLeft: '2rem',}}
                 >
                     <MenuIcon />
                 </div>
