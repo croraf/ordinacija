@@ -36,21 +36,15 @@ class SidebarMenu extends React.Component {
             }}>
                 <div 
                     style={{margin: '3rem', cursor: currentRoute === '/' ? 'default' : 'pointer', fontWeight: currentRoute === '/' && 'bold',}}
-                    onClick={this.servicesClickHandler}
+                    onClick={this.contactClickHandler}
                 >
                     O nama
                 </div>
                 <div 
-                    style={{margin: '3rem', cursor: currentRoute === '/' ? 'default' : 'pointer', fontWeight: currentRoute === '/' && 'bold',}}
+                    style={{margin: '3rem', cursor: currentRoute === '/services' ? 'default' : 'pointer', fontWeight: currentRoute === '/services' && 'bold',}}
                     onClick={this.servicesClickHandler}
                 >
                     Usluge
-                </div>
-                <div 
-                    style={{margin: '3rem', cursor: currentRoute === '/contact' ? 'default' : 'pointer', fontWeight: currentRoute === '/contact' && 'bold',}}
-                    onClick={this.contactClickHandler}
-                >
-                    Kontakt
                 </div>
             </div>
         );

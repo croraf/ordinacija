@@ -20,7 +20,7 @@ class SpreadMenu extends React.Component {
         return (
             <>  
                 <Link 
-                    onClick={this.servicesClickHandler}
+                    onClick={this.contactClickHandler}
                     style={{marginLeft: '2rem', fontSize: '1.2rem', cursor: currentRoute === '/' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/' && 'bold',}}
                     underline='none'
                 >
@@ -29,18 +29,10 @@ class SpreadMenu extends React.Component {
             
                 <Link 
                     onClick={this.servicesClickHandler}
-                    style={{marginLeft: '2rem', fontSize: '1.2rem', cursor: currentRoute === '/' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/' && 'bold',}}
+                    style={{marginLeft: '2rem', fontSize: '1.2rem', cursor: currentRoute === '/services' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/services' && 'bold',}}
                     underline='none'
                 >
                     Usluge
-                </Link>
-            
-                <Link 
-                    onClick={this.contactClickHandler}
-                    style={{marginLeft: '2rem', fontSize: '1.2rem', cursor: currentRoute === '/contact' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/contact' && 'bold',}}
-                    underline='none'
-                >
-                    Kontakt
                 </Link>
             </>
         );

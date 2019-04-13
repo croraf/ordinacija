@@ -16,10 +16,10 @@ const mapDispatchToProps = (dispatch) => ({
         dispatch(push('/'));
     },
     servicesClickHandler: () => {
-        dispatch(push('/'));
+        dispatch(push('/services'));
     },
     contactClickHandler: () => {
-        dispatch(push('/contact'));
+        dispatch(push('/'));
     },
 });
 

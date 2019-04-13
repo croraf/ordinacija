@@ -56,33 +56,7 @@ class Home extends React.Component {
                     marginTop: '1rem',
                     flexDirection: 'column',
                 }}>
-                    {/* <div style={{
-                        minWidth: '200px'
-                    }}><img src='https://picsum.photos/200/600' /></div> */}
-
-                    {/* <RecentOrderNotificationContainer /> */}
-
-                    {/* <MediaQuery query='(max-device-width: 1700px)'>
-                        <div style={containerStyleHd}>
-                            <TitleRowContainer />
-                            <HomeRouter />
-                        </div>
-                    </MediaQuery>
-
-                    <MediaQuery query='(min-device-width: 1701px)'>
-                        <div style={containerStyleFullHd}>
-                            <TitleRowContainer />
-                            <HomeRouter />
-                        </div>
-                    </MediaQuery> */}
-                    
-                    {/* <div style={{
-                        minWidth: '200px'
-                    }}><img src='https://picsum.photos/300/300' /></div> */}
-
-                    
                     <HomeRouter />
-                    {/* <CartModalContainer /> */}
                 </div>
                 <div style={{width: '100%', backgroundColor: 'black', color: 'white'}}>Footer</div>
             </>

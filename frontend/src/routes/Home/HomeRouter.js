@@ -9,9 +9,9 @@ class HomeRouter extends React.Component {
     render() {
         return (
             <Switch>
-                <Route exact={true} path={'/'} component={ServicesContainer} />
+                <Route exact={true} path={'/'} component={ContactContainer} />
                 {/* <Route path={'/restaurants/:restaurantName'} component={restaurantDetailsRenderer}/> */}
-                <Route path={'/contact'} component={ContactContainer}/>
+                <Route path={'/services'} component={ServicesContainer} />
             </Switch>
         );
     }
