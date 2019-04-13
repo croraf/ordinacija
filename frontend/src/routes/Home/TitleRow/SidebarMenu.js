@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Sidebar from 'react-sidebar';
-import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
+import MenuIcon from '@material-ui/icons/Menu';
 
 class SidebarMenu extends React.Component {
 
@@ -24,19 +24,19 @@ class SidebarMenu extends React.Component {
             }}>
                 <div 
                     style={{margin: '3rem', cursor: 'pointer'}}
-                    onClick={() => {onSetSidebarOpen(false); servicesClickHandler();}}
+                    onClick={() => {this.onSetSidebarOpen(false); servicesClickHandler();}}
                 >
                     O nama
                 </div>
                 <div 
                     style={{margin: '3rem', cursor: 'pointer'}}
-                    onClick={() => {onSetSidebarOpen(false); servicesClickHandler();}}
+                    onClick={() => {this.onSetSidebarOpen(false); servicesClickHandler();}}
                 >
                     Usluge
                 </div>
                 <div 
                     style={{margin: '3rem', cursor: 'pointer'}}
-                    onClick={() => {onSetSidebarOpen(false); contactClickHandler();}}
+                    onClick={() => {this.onSetSidebarOpen(false); contactClickHandler();}}
                 >
                     Kontakt
                 </div>
@@ -49,7 +49,7 @@ class SidebarMenu extends React.Component {
                     onClick={() => this.onSetSidebarOpen(true)}
                     style={{cursor: 'pointer', display: this.state.sidebarOpen && 'none'}}
                 >
-                    <AccessAlarmIcon />
+                    <MenuIcon />
                 </div>
                 <Sidebar
                     sidebar={sidebarContent}
