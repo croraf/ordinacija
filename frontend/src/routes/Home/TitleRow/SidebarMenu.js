@@ -23,19 +23,19 @@ class SidebarMenu extends React.Component {
                 textAlign: 'center'
             }}>
                 <div 
-                    style={{margin: '3rem', cursor: 'pointer'}}
+                    style={{margin: '3rem', cursor: currentRoute === '/' ? 'default' : 'pointer', fontWeight: currentRoute === '/' && 'bold',}}
                     onClick={() => {this.onSetSidebarOpen(false); servicesClickHandler();}}
                 >
                     O nama
                 </div>
                 <div 
-                    style={{margin: '3rem', cursor: 'pointer'}}
+                    style={{margin: '3rem', cursor: currentRoute === '/' ? 'default' : 'pointer', fontWeight: currentRoute === '/' && 'bold',}}
                     onClick={() => {this.onSetSidebarOpen(false); servicesClickHandler();}}
                 >
                     Usluge
                 </div>
                 <div 
-                    style={{margin: '3rem', cursor: 'pointer'}}
+                    style={{margin: '3rem', cursor: currentRoute === '/contact' ? 'default' : 'pointer', fontWeight: currentRoute === '/contact' && 'bold',}}
                     onClick={() => {this.onSetSidebarOpen(false); contactClickHandler();}}
                 >
                     Kontakt
