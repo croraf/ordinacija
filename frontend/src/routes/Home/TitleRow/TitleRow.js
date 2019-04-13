@@ -46,7 +46,10 @@ const styles = {
         fontWeight: 'bold'
         //cursor: 'pointer',
     },
-    '@media (min-width: 600px)': {
+    /* '@media (min-width: 600px)': {
+        
+    }, */
+    '@media (min-width: 960px)': {
         titleRow: {
             height: '6rem',
         },
@@ -56,8 +59,6 @@ const styles = {
         spacer: {
             height: '6rem',
         },
-    },
-    '@media (min-width: 960px)': {
         image: {
             marginBottom: '2rem',
         },
