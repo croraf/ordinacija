@@ -18,7 +18,17 @@ const styles = {
         display: 'none',
     },
     xsMenu: {
-
+    },
+    title: {
+        fontSize: '1.5rem',
+        fontWeight: 'normal'
+        //cursor: 'pointer',
+    },
+    '@media (min-width: 600px)': {
+        title: {
+            fontSize: '2.3rem',
+            fontWeight: 'bold'
+        },
     },
     '@media (min-width: 960px)': {
         image: {
@@ -63,11 +73,7 @@ class TitleRow extends React.Component {
                 }}>
                     <div
                         /* onClick={logoClickedHandler} */
-                        style={{
-                            fontSize: '2.3rem',
-                            //cursor: 'pointer',
-                            fontWeight: 'bold',
-                        }}
+                        className={classes.title}
                     >
                         Ordinacija Zekić
                     </div>
