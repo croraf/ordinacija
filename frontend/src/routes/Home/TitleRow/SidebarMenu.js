@@ -12,8 +12,20 @@ class SidebarMenu extends React.Component {
         this.setState({ sidebarOpen: open });
     }
 
+    servicesClickHandler = () => {
+        window.scrollTo(0, window);
+        this.onSetSidebarOpen(false);
+        this.props.servicesClickHandler();
+    }
+
+    contactClickHandler = () => {
+        window.scrollTo(0, window);
+        this.onSetSidebarOpen(false);
+        this.props.contactClickHandler();
+    }
+
     render() {
-        const {servicesClickHandler, contactClickHandler, currentRoute,} = this.props;
+        const {currentRoute,} = this.props;
 
         const sidebarContent = (
             <div style={{
@@ -24,19 +36,19 @@ class SidebarMenu extends React.Component {
             }}>
                 <div 
                     style={{margin: '3rem', cursor: currentRoute === '/' ? 'default' : 'pointer', fontWeight: currentRoute === '/' && 'bold',}}
-                    onClick={() => {this.onSetSidebarOpen(false); servicesClickHandler();}}
+                    onClick={this.servicesClickHandler}
                 >
                     O nama
                 </div>
                 <div 
                     style={{margin: '3rem', cursor: currentRoute === '/' ? 'default' : 'pointer', fontWeight: currentRoute === '/' && 'bold',}}
-                    onClick={() => {this.onSetSidebarOpen(false); servicesClickHandler();}}
+                    onClick={this.servicesClickHandler}
                 >
                     Usluge
                 </div>
                 <div 
                     style={{margin: '3rem', cursor: currentRoute === '/contact' ? 'default' : 'pointer', fontWeight: currentRoute === '/contact' && 'bold',}}
-                    onClick={() => {this.onSetSidebarOpen(false); contactClickHandler();}}
+                    onClick={this.contactClickHandler}
                 >
                     Kontakt
                 </div>

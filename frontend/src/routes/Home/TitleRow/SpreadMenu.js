@@ -1,17 +1,26 @@
 import React from 'react';
-
 import Link from '@material-ui/core/Link';
 
 
 class SpreadMenu extends React.Component {
 
+    servicesClickHandler = () => {
+        window.scrollTo(0, window);
+        this.props.servicesClickHandler();
+    }
+
+    contactClickHandler = () => {
+        window.scrollTo(0, window);
+        this.props.contactClickHandler();
+    }
+
     render() {
-        const {servicesClickHandler, contactClickHandler, currentRoute} = this.props;
+        const {currentRoute} = this.props;
 
         return (
             <>  
                 <Link 
-                    onClick={servicesClickHandler}
+                    onClick={this.servicesClickHandler}
                     style={{marginLeft: '2rem', fontSize: '1.2rem', cursor: currentRoute === '/' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/' && 'bold',}}
                     underline='none'
                 >
@@ -19,7 +28,7 @@ class SpreadMenu extends React.Component {
                 </Link>
             
                 <Link 
-                    onClick={servicesClickHandler}
+                    onClick={this.servicesClickHandler}
                     style={{marginLeft: '2rem', fontSize: '1.2rem', cursor: currentRoute === '/' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/' && 'bold',}}
                     underline='none'
                 >
@@ -27,7 +36,7 @@ class SpreadMenu extends React.Component {
                 </Link>
             
                 <Link 
-                    onClick={contactClickHandler}
+                    onClick={this.contactClickHandler}
                     style={{marginLeft: '2rem', fontSize: '1.2rem', cursor: currentRoute === '/contact' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/contact' && 'bold',}}
                     underline='none'
                 >
