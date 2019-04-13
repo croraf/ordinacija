@@ -1,6 +1,5 @@
 import {connect} from 'react-redux';
 import {push} from 'connected-react-router';
-import {loadRouteData} from 'Modules/restaurants';
 
 import {Services} from './Services';
 
