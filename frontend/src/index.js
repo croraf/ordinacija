@@ -9,9 +9,9 @@ import {history} from './modules/store';
 
 import MainRouter from './MainRouter';
 
+import './style/globalStyle.css';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
-import './style/globalStyle.css';
 const theme = createMuiTheme({
     palette: {
         //type: 'light', // Switching the dark mode on is a single property value change.
