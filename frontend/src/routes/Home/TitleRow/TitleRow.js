@@ -6,6 +6,28 @@ import SpreadMenu from './SpreadMenu';
 import { SidebarMenu } from './SidebarMenu';
 
 const styles = {
+    titleRow: {
+        position: 'fixed',
+        top: '0rem',
+        backgroundColor: '#a48500',
+        width: '100%',
+        padding: '0rem 1.5rem 0rem 1.5rem',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        /* borderBottom: '1px solid black', */
+        color: 'white',
+        opacity: '0.95',
+        height: '5rem',
+        boxSizing: 'border-box',
+        zIndex: 100,
+    },
+    spacer: {
+        width: '100%',
+        height: '5rem',
+        backgroundColor: '#a48500',
+    }, 
     image: {
         width: '100%',
         maxHeight: '700px',
@@ -20,14 +42,19 @@ const styles = {
     xsMenu: {
     },
     title: {
-        fontSize: '1.5rem',
-        fontWeight: 'normal'
+        fontSize: '1.7rem',
+        fontWeight: 'bold'
         //cursor: 'pointer',
     },
     '@media (min-width: 600px)': {
+        titleRow: {
+            height: '6rem',
+        },
         title: {
             fontSize: '2.3rem',
-            fontWeight: 'bold'
+        },
+        spacer: {
+            height: '6rem',
         },
     },
     '@media (min-width: 960px)': {
@@ -54,23 +81,7 @@ class TitleRow extends React.Component {
 
         return (
             <>
-                <div style={{
-                    position: 'fixed',
-                    top: '0rem',
-                    backgroundColor: '#a48500',
-                    width: '100%',
-                    padding: '0rem 1.5rem 0rem 1.5rem',
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    /* borderBottom: '1px solid black', */
-                    color: 'white',
-                    opacity: '0.95',
-                    height: '6rem',
-                    boxSizing: 'border-box',
-                    zIndex: 100,
-                }}>
+                <div className={classes.titleRow}>
                     <div
                         /* onClick={logoClickedHandler} */
                         className={classes.title}
@@ -95,7 +106,7 @@ class TitleRow extends React.Component {
                     </div>
                 </div>
 
-                <div style={{width: '100%', height: '6rem', backgroundColor: '#a48500'}} />
+                <div className={classes.spacer} />
                 <div className={classes.image}>
                     <img src={woman} style={{width: '100%'}}/> 
                 </div>
