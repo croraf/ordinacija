@@ -12,5 +12,5 @@ HOW TO COMPILE FOR BUILD:
 
 
 TODO: 
--make hash router to avoid backend
+-make hash router to avoid backend (or enable browser-history-api router)
 
